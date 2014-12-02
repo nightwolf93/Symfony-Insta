@@ -1,0 +1,4 @@
+insta_app:
+    resource: "@InstaAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
