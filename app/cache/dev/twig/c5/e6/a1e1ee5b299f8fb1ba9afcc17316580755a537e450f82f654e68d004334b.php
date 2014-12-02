@@ -28,9 +28,7 @@ class __TwigTemplate_c5e6a1e1ee5b299f8fb1ba9afcc17316580755a537e450f82f654e68d00
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "     Hello ";
-        echo twig_escape_filter($this->env, (isset($context["name"]) ? $context["name"] : $this->getContext($context, "name")), "html", null, true);
-        echo "!
+        echo "     Page home
  ";
     }
 

@@ -2,12 +2,10 @@
 
 namespace Insta\AppBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-class DefaultController extends Controller
+class DefaultController extends \Symfony\Bundle\FrameworkBundle\Controller\Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('InstaAppBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('InstaAppBundle:Default:index.html.twig');
     }
 }
