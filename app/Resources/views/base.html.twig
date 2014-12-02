@@ -8,7 +8,20 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="container">
+            <div id="header">
+                <center><img src="/img/logo.png" /></center>
+            </div>
+            <div id="navbar">
+                
+            </div>
+            <div id="content">
+                <div class="page">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+            <div id="footer">Par MARTINS Nicolas, Alexis COURAPIED et Yann SCHILL</div>
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
