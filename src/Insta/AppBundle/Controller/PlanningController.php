@@ -11,8 +11,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class PlanningController extends Controller
 {
+    /**
+    * @Route("/planning", name="planning")
+    * @Template("InstaAppBundle:Default:planning.html.twig")
+    */
     public function indexAction(){
-       
+       return array();
     }
     
 }

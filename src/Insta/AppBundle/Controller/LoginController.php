@@ -11,8 +11,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class LoginController extends Controller
 {
+    /**
+    * @Route("/login", name="login")
+    * @Template("InstaAppBundle:Default:connection.html.twig")
+    */
     public function indexAction(){
-       
+       return array();
     }
     
 }
