@@ -10,8 +10,4 @@ insta_app_connection:
     path:       /login
     defaults: { _controller: InstaAppBundle:Login:index }
 
-insta_app_connection:
-    path:       /login
-    defaults: { _controller: InstaAppBundle:Info:index }
-
 
