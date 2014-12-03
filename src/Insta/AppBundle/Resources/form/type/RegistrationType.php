@@ -1,8 +1,9 @@
 <?php
-namespace Insta\AppBundle\Forms\Type;
+namespace Insta\AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Insta\AppBundle\Entity\Account;
 
 class RegistrationType extends AbstractType{
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -13,5 +14,5 @@ class RegistrationType extends AbstractType{
     public function getName() {
         return 'connection';
     }
-
 }
+

@@ -1,8 +1,7 @@
 <?php
-namespace Insta\AppBundle\Forms\data;
+namespace Insta\AppBundle\Form\Data;
 
 use Symfony\Component\Validator\Constraints as Assert;
-use Acme\AccountBundle\Entity\User;
 
 class ConnectionData {
     /**
