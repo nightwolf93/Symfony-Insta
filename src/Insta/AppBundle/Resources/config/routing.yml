@@ -3,5 +3,5 @@ insta_app_homepage:
     defaults: { _controller: InstaAppBundle:Default:index }
     
 insta_app_connection:
-    path:       login
+    path:       /login
     defaults: { _controller: InstaAppBundle:Default:connection }

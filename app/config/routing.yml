@@ -2,3 +2,7 @@ insta_app:
     resource: "@InstaAppBundle/Resources/config/routing.yml"
     prefix:   /
 
+insta_app_connection:
+    resource: "@InstaAppBundle/Resources/config/routing.yml"
+    prefix:   /login
+
