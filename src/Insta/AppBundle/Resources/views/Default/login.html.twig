@@ -12,15 +12,5 @@
      </style>
         <p>.: Connexion :.</p>
      
-     <table class='table_connect'>
-        <tr>
-            <td>Adresse e-mail :</td>
-            <td><input type='email' name='mail'/></td>
-        </tr>
-        <tr>
-            <td>Mot de passe :</td>
-            <td><input type='text' name='pass'/></td>
-        </tr>
-     </table>
-        <p><input class="btn1" type='submit' name='valider' value='Se connecter'/></p>
+        {{ form(form) }}
  {% endblock %}
