@@ -3,5 +3,15 @@ insta_app_homepage:
     defaults: { _controller: InstaAppBundle:Default:index }
     
 insta_app_connection:
+    path:       /planning
+    defaults: { _controller: InstaAppBundle:Planning:index }
+    
+insta_app_connection:
     path:       /login
-    defaults: { _controller: InstaAppBundle:Default:connection }
+    defaults: { _controller: InstaAppBundle:Login:index }
+
+insta_app_connection:
+    path:       /login
+    defaults: { _controller: InstaAppBundle:Info:index }
+
+
