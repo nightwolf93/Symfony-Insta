@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/app/config/routing_dev.yml</file>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/web/css/app.css</file>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/src/Insta/AppBundle/Resources/config/routing.yml</file>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/src/Insta/AppBundle/Controller/DefaultController.php</file>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/app/config/routing.yml</file>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/app/Resources/views/base.html.twig</file>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/src/Insta/AppBundle/Resources/views/Default/index.html.twig</file>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/src/Insta/AppBundle/Resources/views/Default/connection.html.twig</file>
-            <file>file:/Applications/MAMP/htdocs/Symfony-Insta/web/less/app.less</file>
+            <file>file:/C:/UwAmp/www/PLS/src/Insta/AppBundle/Controller/LoginController.php</file>
+            <file>file:/C:/UwAmp/www/PLS/src/Insta/AppBundle/Controller/PlanningController.php</file>
+            <file>file:/C:/UwAmp/www/PLS/src/Insta/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/UwAmp/www/PLS/src/Insta/AppBundle/Entity/News.php</file>
+            <file>file:/C:/UwAmp/www/PLS/web/less/app.less</file>
+            <file>file:/C:/UwAmp/www/PLS/src/Insta/AppBundle/Resources/views/Default/login.html.twig</file>
         </group>
     </open-files>
 </project-private>

@@ -34,11 +34,20 @@ a {
     border: 1px solid black;
     border-top: none;
     text-align: center;
+    transition: 0.2s;
+    
+    &:hover {
+        height: 45px;
+        .item {
+            line-height: 45px;
+            font-size:17px;
+        }
+    }
     .item {
         color: white;
-        height: 35px;
+        height: 100%;
         line-height: 35px;
-        width: 100px;
+        width: 130px;
         text-align: center;
         transition: 0.2s;
         cursor: pointer;
@@ -104,3 +113,16 @@ a {
     }
 }
 
+.box {
+    background-color: green;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.error-box {
+    .box;
+    background-color: red;
+}

@@ -22,7 +22,7 @@ class LoginController extends Controller
         
         $formBuilder
                 ->add('email', 'text')
-                ->add('password', 'text')
+                ->add('password', 'password')
                 ->add('Login', 'submit');
         
         $form = $formBuilder->getForm();
@@ -30,17 +30,20 @@ class LoginController extends Controller
         
         if($form->isValid()){
             
-            $input = $this->getDoctrine()->getRepository('InstaAppBundle:Account')
+            $input = $this->getDoctrine()->getManager()->getRepository('InstaAppBundle:Account')
                     ->findOneByEmail($form['email']->getData());
             if($input === null){
-                return array('form' => $form->createView(), 'error' => 'Aucune compte trouver');
+                return array('form' => $form->createView(), 'error' => 'Aucune compte trouver : ' . $form['email']->getData());
             }
-            
-            
-            return $this->redirect($this->generateUrl('home'));
+            if($input->getPassword() !== $form['password']->getData()){
+                return array('form' => $form->createView(), 'error' => 'Mot de passe incorrect');
+            }
+            else {
+                return $this->redirect($this->generateUrl('home'));
+            }
         }
         
-        return array('form' => $form->createView());
+        return array('form' => $form->createView(), 'error' => false);
     }
     
 }
