@@ -31,7 +31,7 @@ class ConnectionData {
 
     public function getpassword()
     {
-        return $this->passwordv;
+        return $this->password;
     }
     
 }

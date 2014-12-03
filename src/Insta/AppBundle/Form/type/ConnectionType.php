@@ -9,9 +9,9 @@ class ConnectionType extends AbstractType{
     
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('email', 'email', array('requierd' => true));
+        $builder->add('email', 'email', array('required' => true));
         $builder->add('password', 'repeated', array(
-           'type' => 'password', 'requierd' => true
+           'type' => 'password', 'required' => true
         ));
     }
 
