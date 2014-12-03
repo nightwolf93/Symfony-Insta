@@ -2,13 +2,30 @@
 
 namespace Insta\AppBundle\Controller;
 
-class DefaultController extends \Symfony\Bundle\FrameworkBundle\Controller\Controller
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+class DefaultController extends Controller
 {
+    /**
+    * @Route("/")
+    * @Template("InstaAppBundle:Default:index.html.twig")
+    */
     public function indexAction()
     {
-        return $this->render('InstaAppBundle:Default:index.html.twig');
+        return array();
     }
+    
+    /**
+    * @Route("/login")
+    * @Template("InstaAppBundle:Default:connection.html.twig")
+    */
     public function connectionAction(){
-        return $this->render('InstaAppBundle:Default:connection.html.twig');
+        return array();
     }
 }
