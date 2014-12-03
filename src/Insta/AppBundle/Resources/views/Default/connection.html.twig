@@ -1,5 +1,27 @@
 {% extends '::base.html.twig' %}
 
  {% block body %}
-     Page connection
+     <style>
+         p{
+             text-align: center;
+         }
+         .table_connect{
+             margin : auto;
+         }
+     </style>
+        <p>.: Connexion :.</p>
+     
+     <table class='table_connect'>
+        <tr>
+            <td>Adresse e-mail :</td>
+            <td><input type='email' name='mail'/></td>
+        </tr>
+        <tr>
+            <td>Mot de passe :</td>
+            <td><input type='text' name='pass'/></td>
+        </tr>
+        <tr>
+            <td><input type='submit' name='valider' value='valider'/></td>
+        </tr>
+     </table>
  {% endblock %}
