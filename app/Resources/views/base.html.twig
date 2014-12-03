@@ -14,10 +14,10 @@
                 <center><img src="{{ asset('img/logo.png') }}" /></center>
             </div>
             <div id="navbar">
-                <div class="item">Accueil</div>
-                <div class="item">Plannings</div>
-                <div class="item">Connexion</div>
-                <div class="item">A propos de</div>
+                <div class="item"><a href="{{ path('home') }}">Accueil</a></div>
+                {#<div class="item"><a href="{{ path('login') }}">Plannings</a></div>#}
+                <div class="item"><a href="{{ path('login') }}">Connexion</a></div>
+                {#<div class="item"><a href="{{ path('login') }}">A propos de</a></div>#}
             </div>
             <div id="content">
                 <div class="page">
