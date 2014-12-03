@@ -13,7 +13,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-    * @Route("/")
+    * @Route("/", name="home")
     * @Template("InstaAppBundle:Default:index.html.twig")
     */
     public function indexAction()
@@ -22,7 +22,7 @@ class DefaultController extends Controller
     }
     
     /**
-    * @Route("/login")
+    * @Route("/login", name="login")
     * @Template("InstaAppBundle:Default:connection.html.twig")
     */
     public function connectionAction(){
