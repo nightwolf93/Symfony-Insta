@@ -6,9 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-
-use Insta\AppBundle\Form\Type\RegistrationType;
-use Insta\AppBundle\Form\Data\ConnectionData;
 use Insta\AppBundle\Entity\Account;
 
 class LoginController extends Controller
@@ -32,6 +29,13 @@ class LoginController extends Controller
         $form->handleRequest($request);
         
         if($form->isValid()){
+            
+            $input = $this->getDoctrine()->getRepository('InstaAppBundle:Account')
+                    ->findOneByEmail($form['email']->getData());
+            if($input === null){
+                return array('form' => $form->createView(), 'error' => 'Aucune compte trouver');
+            }
+            
             
             return $this->redirect($this->generateUrl('home'));
         }
