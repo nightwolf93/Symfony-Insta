@@ -1,8 +1,4 @@
 insta_app:
-    resource: "@InstaAppBundle/Resources/config/routing.yml"
+    resource: "@InstaAppBundle/Controller/"
+    type:     annotation
     prefix:   /
-
-insta_app_connection:
-    resource: "@InstaAppBundle/Resources/config/routing.yml"
-    prefix:   /login
-
