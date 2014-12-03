@@ -6,14 +6,18 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+        <script src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
     </head>
     <body>
         <div id="container">
             <div id="header">
-                <center><img src="/img/logo.png" /></center>
+                <center><img src="{{ asset('img/logo.png') }}" /></center>
             </div>
             <div id="navbar">
-                
+                <div class="item">Accueil</div>
+                <div class="item">Plannings</div>
+                <div class="item">Connexion</div>
+                <div class="item">A propos de</div>
             </div>
             <div id="content">
                 <div class="page">

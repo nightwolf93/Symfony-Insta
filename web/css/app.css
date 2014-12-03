@@ -16,25 +16,40 @@ body {
 }
 
 #header {
-    background: #45484d; /* Old browsers */
-    background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-    
+    background: black; /* Old browsers */
+    border: 1px solid black;
+    border-bottom: none;
     width: 100%;
     height: 70px;
-    border: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #navbar {
-    background-color: gray;
+    background-color: #91226b;
     width: 100%;
     height: 35px;
     border: 1px solid black;
+    border-top: none;
+    text-align: center;
+}
+
+#navbar .item {
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    width: 100px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+}
+
+#navbar .item:hover {
+    background-color: #d56520;
+    color: white;
+    font-weight: bold;
 }
 
 #content {
@@ -49,11 +64,20 @@ body {
     padding: 10px;
 }
 
+#content .page .title {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+
 #footer {
     width: 100%;
     height: 30px;
-    background-color: gray;
-    color: black;
+    background-color: #91226b;
+    color: white;
     text-align: center;
     line-height: 30px;
     font-size:15px;
