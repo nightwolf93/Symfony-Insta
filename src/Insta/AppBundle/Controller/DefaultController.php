@@ -22,10 +22,26 @@ class DefaultController extends Controller
     }
     
     /**
+    * @Route("/planning", name="planning")
+    * @Template("InstaAppBundle:Default:planning.html.twig")
+    */
+    public function planningAction(){
+        return array();
+    }
+    
+    /**
     * @Route("/login", name="login")
     * @Template("InstaAppBundle:Default:connection.html.twig")
     */
     public function connectionAction(){
+        return array();
+    }
+    
+    /**
+    * @Route("/info", name="info")
+    * @Template("InstaAppBundle:Default:info.html.twig")
+    */
+    public function infoAction(){
         return array();
     }
 }
