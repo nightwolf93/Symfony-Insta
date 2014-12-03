@@ -22,10 +22,10 @@ class DefaultController extends Controller
     }
     
     /**
-    * @Route("/login", name="login")
-    * @Template("InstaAppBundle:Default:connection.html.twig")
+    * @Route("/info", name="info")
+    * @Template("InstaAppBundle:Default:info.html.twig")
     */
-    public function connectionAction(){
+    public function infoAction(){
         return array();
     }
 }
