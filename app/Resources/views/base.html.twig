@@ -29,11 +29,11 @@
             <div class="item">
                 <a href="{{ path('login') }}">Connexion</a>
             </div>
+            {% if is_granted("ROLE_ADMIN") %}
             <div class="item">
-                {% if is_granted("ROLE_ADMIN") %}
-                    <a href="{{ path('admin') }}">Administration</a>
-                {% endif %}
+                    <a href="{{ path('admin') }}">Administration</a>              
             </div>
+            {% endif %}
         </div>
         <div id="container">
             <div class="content">
