@@ -9,6 +9,36 @@
         <script src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
     </head>
     <body>
+        <div id="sidebar">
+            <div class="logo">
+                <center><img src="{{ asset('img/logo.png') }}" width="200" /></center>
+            </div>
+            <br /><br />
+            <div class="item">
+                <a href="{{ path('home') }}">Accueil du site</a>
+            </div>
+            <div class="item">
+                <a href="{{ path('planning') }}">Les plannings</a>
+            </div>
+            <div class="item">
+                <a href="{{ path('info') }}">A propos de</a>
+            </div>
+            
+            <br /><br />
+            
+            <div class="item">
+                <a href="{{ path('login') }}">Connexion</a>
+            </div>
+            <div class="item">
+                <a href="{{ path('admin') }}">Administration</a>
+            </div>
+        </div>
+        <div id="container">
+            <div class="content">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+        <!--
         <div id="container">
             <div id="header">
                 <center><img src="{{ asset('img/logo.png') }}" /></center>
@@ -16,21 +46,18 @@
             <div id="navbar">
                 <div class="item"><a href="{{ path('home') }}">Accueil</a></div>
                 <div class="item"><a href="{{ path('planning') }}">Plannings</a></div>
-                {% if app.session.get("account") %}
-                    <div class="item"><a href="{{ path('logout') }}">Deconnexion</a></div>
-                {% else %}
-                    <div class="item"><a href="{{ path('login') }}">Connexion</a></div>
-                {% endif %}
+                <div class="item"><a href="{{ path('login') }}">Connexion</a></div>
                 <div class="item"><a href="{{ path('info') }}">A propos de</a></div>
                 <div class="item"><a href="{{ path('admin') }}">A propos de</a></div>
             </div>
             <div id="content">
                 <div class="page">
-                    {% block body %}{% endblock %}
+                    
                 </div>
             </div>
             <div id="footer">Par MARTINS Nicolas, Alexis COURAPIED et Yann SCHILL</div>
         </div>
         {% block javascripts %}{% endblock %}
+        -->
     </body>
 </html>
