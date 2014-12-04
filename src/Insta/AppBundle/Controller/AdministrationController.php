@@ -1,5 +1,6 @@
 <?php
 
+
 namespace Insta\AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -11,12 +12,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
-class PlanningController extends Controller
+class AdministrationController extends Controller
 {
     /**
-    * @Route("/planning", name="planning")
+    * @Route("/admin", name="admin")
     * @Security("is_granted('ROLE_ADMIN')")
-    * @Template("InstaAppBundle:Default:planning.html.twig")
+    * @Template("InstaAppBundle:Admin:index.html.twig")
     */
     public function indexAction(){
        $user = $this->getUser();
