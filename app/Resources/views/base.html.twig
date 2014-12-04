@@ -30,7 +30,9 @@
                 <a href="{{ path('login') }}">Connexion</a>
             </div>
             <div class="item">
-                <a href="{{ path('admin') }}">Administration</a>
+                {% if is_granted("ROLE_ADMIN") %}
+                    <a href="{{ path('admin') }}">Administration</a>
+                {% endif %}
             </div>
         </div>
         <div id="container">
