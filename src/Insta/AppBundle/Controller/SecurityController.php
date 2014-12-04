@@ -32,12 +32,5 @@ class SecurityController extends Controller {
         );
     }
     
-    /**
-     * @Route("/login", name="login_check")
-     */
-    public function loginCheckAction(){
-        return array();
-        
-    }
 
 }

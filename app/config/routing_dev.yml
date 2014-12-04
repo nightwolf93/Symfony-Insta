@@ -17,6 +17,8 @@ _errors:
 _main:
     resource: routing.yml
 
-# AcmeDemoBundle routes (to be removed)
-_acme_demo:
-    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+login_check:
+    path:   /login_check
+ 
+logout:
+    path:   /logout
