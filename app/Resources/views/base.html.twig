@@ -16,7 +16,11 @@
             <div id="navbar">
                 <div class="item"><a href="{{ path('home') }}">Accueil</a></div>
                 <div class="item"><a href="{{ path('planning') }}">Plannings</a></div>
-                <div class="item"><a href="{{ path('login') }}">Connexion</a></div>
+                {% if app.session.get("account") %}
+                    <div class="item"><a href="{{ path('logout') }}">Deconnexion</a></div>
+                {% else %}
+                    <div class="item"><a href="{{ path('login') }}">Connexion</a></div>
+                {% endif %}
                 <div class="item"><a href="{{ path('info') }}">A propos de</a></div>
             </div>
             <div id="content">

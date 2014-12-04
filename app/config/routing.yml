@@ -1,4 +1,0 @@
-insta_app:
-    resource: "@InstaAppBundle/Controller/"
-    type:     annotation
-    prefix:   /

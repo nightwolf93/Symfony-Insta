@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Insta\AppBundle\Entity\Account;
 
 class LoginController extends Controller
@@ -16,6 +17,12 @@ class LoginController extends Controller
     */
     public function indexAction(){
         $request = $this->getRequest();
+        $session = $request->getSession();
+        if($session->has('account')){
+            return $this->redirect($this->generateUrl('home'));
+        }
+        
+        
         
         $account = new Account();
         $formBuilder = $this->createFormBuilder($account);
@@ -39,6 +46,10 @@ class LoginController extends Controller
                 return array('form' => $form->createView(), 'error' => 'Mot de passe incorrect');
             }
             else {
+
+                
+                $session->set('account', $input);
+                
                 return $this->redirect($this->generateUrl('home'));
             }
         }
@@ -46,6 +57,16 @@ class LoginController extends Controller
         return array('form' => $form->createView(), 'error' => false);
     }
     
+    /**
+    * @Route("/logout", name="logout")
+    * @Template("InstaAppBundle:Default:login.html.twig")
+    */
+    public function logout(){
+        $request = $this->getRequest();
+        $session = $request->getSession();
+        $session->clear();
+        return $this->redirect($this->generateUrl('home'));
+    }
 }
 
 
