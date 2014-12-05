@@ -15,27 +15,6 @@ Date: 2014-12-05 09:56:20
 
 SET FOREIGN_KEY_CHECKS=0;
 
--- ----------------------------
--- Table structure for accounts
--- ----------------------------
-DROP TABLE IF EXISTS `accounts`;
-CREATE TABLE `accounts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `level` int(1) NOT NULL DEFAULT '0',
-  `promo_id` int(4) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `tuteur_id` int(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of accounts
--- ----------------------------
-INSERT INTO `accounts` VALUES ('1', 'admin@test.com', 'admin', '1', '138', 'test', 'test', '0');
-INSERT INTO `accounts` VALUES ('2', 'x@x.com', 'x', '0', '138', 'test', 'test', '0');
 
 -- ----------------------------
 -- Table structure for entreprises
@@ -46,7 +25,7 @@ CREATE TABLE `entreprises` (
   `libelle` varchar(255) NOT NULL,
   `telephone` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of entreprises
@@ -66,7 +45,7 @@ CREATE TABLE `localisation` (
   `mail` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `libelle` (`lieu`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of localisation
@@ -80,28 +59,10 @@ CREATE TABLE `materiels` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of materiels
--- ----------------------------
-
--- ----------------------------
--- Table structure for news
--- ----------------------------
-DROP TABLE IF EXISTS `news`;
-CREATE TABLE `news` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `content` varchar(5000) NOT NULL,
-  `author` varchar(255) NOT NULL,
-  `created_at` date NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `author_id` (`author`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of news
 -- ----------------------------
 
 -- ----------------------------
@@ -113,8 +74,9 @@ CREATE TABLE `professeurs` (
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `status_id` int(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  FOREIGN KEY(`status_id`) references status_professeur(`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of professeurs
@@ -125,10 +87,12 @@ CREATE TABLE `professeurs` (
 -- ----------------------------
 DROP TABLE IF EXISTS `promos`;
 CREATE TABLE `promos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `libelle` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `promos`(`id`, `libelle`) VALUES (138,'bets promo');
 
 -- ----------------------------
 -- Records of promos
@@ -142,11 +106,119 @@ CREATE TABLE `roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of roles
 -- ----------------------------
+INSERT INTO  `roles` (  `id` ,  `libelle` ) VALUES ( 1,  'ROLE_ADMIN' );
+INSERT INTO  `roles` (  `id` ,  `libelle` ) VALUES ( 2,  'ROLE_USER' );
+
+-- ----------------------------
+-- Table structure for status_salle
+-- ----------------------------
+DROP TABLE IF EXISTS `status_salle`;
+CREATE TABLE `status_salle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `libelle` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of status_salle
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for status_professeur
+-- ----------------------------
+DROP TABLE IF EXISTS `status_professeur`;
+CREATE TABLE `status_professeur` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `libelle` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of status_professeur
+-- ----------------------------
+
+
+-- ----------------------------
+-- Table structure for tuteurs
+-- ----------------------------
+DROP TABLE IF EXISTS `tuteurs`;
+CREATE TABLE `tuteurs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `entreprise_id` int(100) NOT NULL,
+  `telephone` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`entreprise_id`) references entreprises(`id`),
+  FOREIGN KEY (`id`) references accounts(`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tuteurs
+-- ----------------------------
+
+
+
+
+-- ----------------------------
+-- Table structure for accounts
+-- ----------------------------
+DROP TABLE IF EXISTS `accounts`;
+CREATE TABLE `accounts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `salt` varchar(225) NOT NULL,
+  `promo_id` int(4) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `role_id` int(100),
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`promo_id`) references promos(`id`),
+  FOREIGN KEY (`role_id`) references roles(`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of accounts
+-- ----------------------------
+
+INSERT INTO  `accounts`(`id`, `email`, `password`, `salt`, `promo_id`, `nom`, `prenom`, `role_id`)
+ VALUES ( 1,  'admin@test.com', 'admin', 'admin', 138, 'nom', 'prenom', 1 );
+
+
+INSERT INTO  `accounts`(`id`, `email`, `password`, `salt`, `promo_id`, `nom`, `prenom`, `role_id`)
+ VALUES ( 2,  'a', 'a', 'user', 138, 'nom', 'prenom', 2 );
+
+
+-- ----------------------------
+-- Table structure for news
+-- ----------------------------
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `content` varchar(5000) NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `created_at` date NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`id`) references accounts(`id`),
+  KEY `author_id` (`author`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of news
+-- ----------------------------
+
+
+
+
+
+
 
 -- ----------------------------
 -- Table structure for salles
@@ -159,9 +231,13 @@ CREATE TABLE `salles` (
   `nb_place` int(255) NOT NULL,
   `nb_poste` int(255) NOT NULL,
   `materiel_id` int(2) NOT NULL,
+  `status_id` int(2) NOT NULL,
   PRIMARY KEY (`id`),
+  FOREIGN KEY(`localisation_id`) references localisation(`id`),
+  FOREIGN KEY(`materiel_id`) references materiels(`id`),
+  FOREIGN KEY(`status_id`) references status_salle(`id`),
   KEY `localisation_name` (`localisation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of salles
@@ -179,40 +255,12 @@ CREATE TABLE `seances` (
   `type` int(2) NOT NULL,
   `professeur_id` int(100) NOT NULL,
   `promo_id` int(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `salle_id` int(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`professeur_id`) references professeurs(`id`),
+  FOREIGN KEY (`salle_id`) references salles(`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of seances
--- ----------------------------
-
--- ----------------------------
--- Table structure for status
--- ----------------------------
-DROP TABLE IF EXISTS `status`;
-CREATE TABLE `status` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `libelle` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of status
--- ----------------------------
-
--- ----------------------------
--- Table structure for tuteurs
--- ----------------------------
-DROP TABLE IF EXISTS `tuteurs`;
-CREATE TABLE `tuteurs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `entreprise_id` int(100) NOT NULL,
-  `telephone` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of tuteurs
 -- ----------------------------
