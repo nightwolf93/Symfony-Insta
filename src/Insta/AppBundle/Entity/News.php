@@ -5,137 +5,49 @@ namespace Insta\AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * News
+ *
+ * @ORM\Table(name="news", indexes={@ORM\Index(name="author_id", columns={"author"})})
  * @ORM\Entity
- * @ORM\Table(name="news")
  */
 class News
 {
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    protected $id;
-    
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    protected $title;
-    
-    /**
-     * @ORM\Column(type="string", length=5000)
-     */
-    protected $content;
-    
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    protected $author;
-    
-    /**
-    * @ORM\Column(type="date")
-    */
-    protected $created_at;
+    private $id;
 
     /**
-     * Get id
+     * @var string
      *
-     * @return integer 
+     * @ORM\Column(name="title", type="string", length=255, nullable=false)
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $title;
 
     /**
-     * Set title
+     * @var string
      *
-     * @param string $title
-     * @return News
+     * @ORM\Column(name="content", type="string", length=5000, nullable=false)
      */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-
-        return $this;
-    }
+    private $content;
 
     /**
-     * Get title
+     * @var string
      *
-     * @return string 
+     * @ORM\Column(name="author", type="string", length=255, nullable=false)
      */
-    public function getTitle()
-    {
-        return $this->title;
-    }
+    private $author;
 
     /**
-     * Set content
+     * @var \DateTime
      *
-     * @param string $content
-     * @return News
+     * @ORM\Column(name="created_at", type="date", nullable=false)
      */
-    public function setContent($content)
-    {
-        $this->content = $content;
+    private $createdAt;
 
-        return $this;
-    }
 
-    /**
-     * Get content
-     *
-     * @return string 
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-
-    /**
-     * Set author
-     *
-     * @param string $author
-     * @return News
-     */
-    public function setAuthor($author)
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
-    /**
-     * Get author
-     *
-     * @return string 
-     */
-    public function getAuthor()
-    {
-        return $this->author;
-    }
-
-    /**
-     * Set created_at
-     *
-     * @param \DateTime $createdAt
-     * @return News
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->created_at = $createdAt;
-
-        return $this;
-    }
-
-    /**
-     * Get created_at
-     *
-     * @return \DateTime 
-     */
-    public function getCreatedAt()
-    {
-        return $this->created_at;
-    }
 }

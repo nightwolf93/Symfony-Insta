@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Insta\AppBundle\Entity\Salles" table="salles">
+    <indexes>
+      <index name="localisation_name" columns="localisation_id"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="localisationId" type="integer" column="localisation_id" nullable="false"/>
+    <field name="libelle" type="integer" column="libelle" nullable="false"/>
+    <field name="nbPlace" type="integer" column="nb_place" nullable="false"/>
+    <field name="nbPoste" type="integer" column="nb_poste" nullable="false"/>
+    <field name="materielId" type="integer" column="materiel_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>
