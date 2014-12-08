@@ -64,4 +64,152 @@ class Localisation
     private $mail;
 
 
+
+    /**
+     * Set lieu
+     *
+     * @param string $lieu
+     * @return Localisation
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+
+        return $this;
+    }
+
+    /**
+     * Get lieu
+     *
+     * @return string 
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     * @return Localisation
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string 
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set cp
+     *
+     * @param integer $cp
+     * @return Localisation
+     */
+    public function setCp($cp)
+    {
+        $this->cp = $cp;
+
+        return $this;
+    }
+
+    /**
+     * Get cp
+     *
+     * @return integer 
+     */
+    public function getCp()
+    {
+        return $this->cp;
+    }
+
+    /**
+     * Set telephone
+     *
+     * @param string $telephone
+     * @return Localisation
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Get telephone
+     *
+     * @return string 
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * Set plan
+     *
+     * @param string $plan
+     * @return Localisation
+     */
+    public function setPlan($plan)
+    {
+        $this->plan = $plan;
+
+        return $this;
+    }
+
+    /**
+     * Get plan
+     *
+     * @return string 
+     */
+    public function getPlan()
+    {
+        return $this->plan;
+    }
+
+    /**
+     * Set mail
+     *
+     * @param string $mail
+     * @return Localisation
+     */
+    public function setMail($mail)
+    {
+        $this->mail = $mail;
+
+        return $this;
+    }
+
+    /**
+     * Get mail
+     *
+     * @return string 
+     */
+    public function getMail()
+    {
+        return $this->mail;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

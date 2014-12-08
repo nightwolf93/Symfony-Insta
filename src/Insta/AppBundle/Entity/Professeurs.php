@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Professeurs
  *
- * @ORM\Table(name="professeurs")
+ * @ORM\Table(name="professeurs", indexes={@ORM\Index(name="status_id", columns={"status_id"})})
  * @ORM\Entity
  */
 class Professeurs
@@ -43,4 +43,83 @@ class Professeurs
     private $statusId;
 
 
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Professeurs
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     * @return Professeurs
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string 
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set statusId
+     *
+     * @param integer $statusId
+     * @return Professeurs
+     */
+    public function setStatusId($statusId)
+    {
+        $this->statusId = $statusId;
+
+        return $this;
+    }
+
+    /**
+     * Get statusId
+     *
+     * @return integer 
+     */
+    public function getStatusId()
+    {
+        return $this->statusId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

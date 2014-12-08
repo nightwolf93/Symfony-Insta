@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="Seances" table="seances">
+    <indexes>
+      <index name="professeur_id" columns="professeur_id"/>
+      <index name="salle_id" columns="salle_id"/>
+    </indexes>
     <id name="id" type="integer" column="id">
       <generator strategy="IDENTITY"/>
     </id>
@@ -10,5 +14,6 @@
     <field name="type" type="integer" column="type" nullable="false"/>
     <field name="professeurId" type="integer" column="professeur_id" nullable="false"/>
     <field name="promoId" type="integer" column="promo_id" nullable="false"/>
+    <field name="salleId" type="integer" column="salle_id" nullable="false"/>
   </entity>
 </doctrine-mapping>

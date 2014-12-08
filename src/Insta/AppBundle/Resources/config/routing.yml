@@ -5,15 +5,4 @@ insta_app_homepage:
 insta_app_planning:
     path:       /planning
     defaults: { _controller: InstaAppBundle:Planning:index }
-    
-insta_app_login:
-    path:       /login
-    defaults: { _controller: InstaAppBundle:Security:login }
-    
-insta_app_login:
-    path:       /admin
-    defaults: { _controller: InstaAppBundle:Administration:index }
-
-
-
 

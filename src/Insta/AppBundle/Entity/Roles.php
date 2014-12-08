@@ -2,6 +2,7 @@
 
 namespace Insta\AppBundle\Entity;
 
+use Symfony\Component\Security\Core\Role\RoleInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="roles")
  * @ORM\Entity
  */
-class Roles
+class Roles implements RoleInterface
 {
     /**
      * @var integer
@@ -28,5 +29,41 @@ class Roles
      */
     private $libelle;
 
+    public function getRole() {
+        return $this->libelle;
+    }
 
+
+    /**
+     * Set libelle
+     *
+     * @param string $libelle
+     * @return Roles
+     */
+    public function setLibelle($libelle)
+    {
+        $this->libelle = $libelle;
+
+        return $this;
+    }
+
+    /**
+     * Get libelle
+     *
+     * @return string 
+     */
+    public function getLibelle()
+    {
+        return $this->libelle;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

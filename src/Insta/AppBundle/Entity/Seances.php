@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Seances
  *
- * @ORM\Table(name="seances")
+ * @ORM\Table(name="seances", indexes={@ORM\Index(name="professeur_id", columns={"professeur_id"}), @ORM\Index(name="salle_id", columns={"salle_id"})})
  * @ORM\Entity
  */
 class Seances
@@ -63,5 +63,183 @@ class Seances
      */
     private $promoId;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="salle_id", type="integer", nullable=false)
+     */
+    private $salleId;
 
+
+
+    /**
+     * Set dateDebut
+     *
+     * @param \DateTime $dateDebut
+     * @return Seances
+     */
+    public function setDateDebut($dateDebut)
+    {
+        $this->dateDebut = $dateDebut;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDebut
+     *
+     * @return \DateTime 
+     */
+    public function getDateDebut()
+    {
+        return $this->dateDebut;
+    }
+
+    /**
+     * Set dateFin
+     *
+     * @param \DateTime $dateFin
+     * @return Seances
+     */
+    public function setDateFin($dateFin)
+    {
+        $this->dateFin = $dateFin;
+
+        return $this;
+    }
+
+    /**
+     * Get dateFin
+     *
+     * @return \DateTime 
+     */
+    public function getDateFin()
+    {
+        return $this->dateFin;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Seances
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set type
+     *
+     * @param integer $type
+     * @return Seances
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return integer 
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set professeurId
+     *
+     * @param integer $professeurId
+     * @return Seances
+     */
+    public function setProfesseurId($professeurId)
+    {
+        $this->professeurId = $professeurId;
+
+        return $this;
+    }
+
+    /**
+     * Get professeurId
+     *
+     * @return integer 
+     */
+    public function getProfesseurId()
+    {
+        return $this->professeurId;
+    }
+
+    /**
+     * Set promoId
+     *
+     * @param integer $promoId
+     * @return Seances
+     */
+    public function setPromoId($promoId)
+    {
+        $this->promoId = $promoId;
+
+        return $this;
+    }
+
+    /**
+     * Get promoId
+     *
+     * @return integer 
+     */
+    public function getPromoId()
+    {
+        return $this->promoId;
+    }
+
+    /**
+     * Set salleId
+     *
+     * @param integer $salleId
+     * @return Seances
+     */
+    public function setSalleId($salleId)
+    {
+        $this->salleId = $salleId;
+
+        return $this;
+    }
+
+    /**
+     * Get salleId
+     *
+     * @return integer 
+     */
+    public function getSalleId()
+    {
+        return $this->salleId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }
