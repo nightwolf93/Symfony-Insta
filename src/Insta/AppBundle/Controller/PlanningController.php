@@ -15,8 +15,7 @@ class PlanningController extends Controller
 {
     /**
     * @Route("/planning", name="planning")
-    * @Security("is_granted('ROLE_ADMIN')")
-    * @Template("InstaAppBundle:Default:planning.html.twig")
+    * @Template("InstaAppBundle:Planning:index.html.twig")
     */
     public function indexAction(){
        $user = $this->getUser();

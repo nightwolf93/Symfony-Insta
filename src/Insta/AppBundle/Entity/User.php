@@ -18,6 +18,19 @@ class User extends BaseUser
    * @ORM\GeneratedValue(strategy="AUTO")
    */
   protected $id;
+  
+  /**
+    * @var integer
+    *
+    * @ORM\Column(name="promo_id", type="integer", nullable=false)
+    */
+  private $promoId;
+  
+  
+  public function __construct() {
+      parent::__construct();
+      $this->promoId = 138;
+  }
 }
 
 ?>

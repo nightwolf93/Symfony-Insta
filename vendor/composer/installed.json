@@ -510,124 +510,6 @@
         ]
     },
     {
-        "name": "symfony/symfony",
-        "version": "2.6.x-dev",
-        "version_normalized": "2.6.9999999.9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/symfony.git",
-            "reference": "c4a80412b8dc36dbe04d944939a06a70665c805f"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/symfony/zipball/c4a80412b8dc36dbe04d944939a06a70665c805f",
-            "reference": "c4a80412b8dc36dbe04d944939a06a70665c805f",
-            "shasum": ""
-        },
-        "require": {
-            "doctrine/common": "~2.2",
-            "php": ">=5.3.3",
-            "psr/log": "~1.0",
-            "twig/twig": "~1.12"
-        },
-        "replace": {
-            "symfony/browser-kit": "self.version",
-            "symfony/class-loader": "self.version",
-            "symfony/config": "self.version",
-            "symfony/console": "self.version",
-            "symfony/css-selector": "self.version",
-            "symfony/debug": "self.version",
-            "symfony/debug-bundle": "self.version",
-            "symfony/dependency-injection": "self.version",
-            "symfony/doctrine-bridge": "self.version",
-            "symfony/dom-crawler": "self.version",
-            "symfony/event-dispatcher": "self.version",
-            "symfony/expression-language": "self.version",
-            "symfony/filesystem": "self.version",
-            "symfony/finder": "self.version",
-            "symfony/form": "self.version",
-            "symfony/framework-bundle": "self.version",
-            "symfony/http-foundation": "self.version",
-            "symfony/http-kernel": "self.version",
-            "symfony/intl": "self.version",
-            "symfony/locale": "self.version",
-            "symfony/monolog-bridge": "self.version",
-            "symfony/options-resolver": "self.version",
-            "symfony/process": "self.version",
-            "symfony/propel1-bridge": "self.version",
-            "symfony/property-access": "self.version",
-            "symfony/proxy-manager-bridge": "self.version",
-            "symfony/routing": "self.version",
-            "symfony/security": "self.version",
-            "symfony/security-acl": "self.version",
-            "symfony/security-bundle": "self.version",
-            "symfony/security-core": "self.version",
-            "symfony/security-csrf": "self.version",
-            "symfony/security-http": "self.version",
-            "symfony/serializer": "self.version",
-            "symfony/stopwatch": "self.version",
-            "symfony/swiftmailer-bridge": "self.version",
-            "symfony/templating": "self.version",
-            "symfony/translation": "self.version",
-            "symfony/twig-bridge": "self.version",
-            "symfony/twig-bundle": "self.version",
-            "symfony/validator": "self.version",
-            "symfony/var-dumper": "self.version",
-            "symfony/web-profiler-bundle": "self.version",
-            "symfony/yaml": "self.version"
-        },
-        "require-dev": {
-            "doctrine/data-fixtures": "1.0.*",
-            "doctrine/dbal": "~2.2",
-            "doctrine/doctrine-bundle": "~1.2",
-            "doctrine/orm": "~2.2,>=2.2.3",
-            "egulias/email-validator": "~1.2",
-            "ircmaxell/password-compat": "~1.0",
-            "monolog/monolog": "~1.11",
-            "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
-            "propel/propel1": "~1.6"
-        },
-        "time": "2014-12-05 12:00:15",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.6-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Symfony\\": "src/"
-            },
-            "classmap": [
-                "src/Symfony/Component/HttpFoundation/Resources/stubs",
-                "src/Symfony/Component/Intl/Resources/stubs"
-            ],
-            "files": [
-                "src/Symfony/Component/Intl/Resources/stubs/functions.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Symfony Community",
-                "homepage": "http://symfony.com/contributors"
-            },
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            }
-        ],
-        "description": "The Symfony PHP framework",
-        "homepage": "http://symfony.com",
-        "keywords": [
-            "framework"
-        ]
-    },
-    {
         "name": "doctrine/dbal",
         "version": "v2.5.0",
         "version_normalized": "2.5.0.0",
@@ -1652,56 +1534,6 @@
         ]
     },
     {
-        "name": "sensio/generator-bundle",
-        "version": "v2.4.3",
-        "version_normalized": "2.4.3.0",
-        "target-dir": "Sensio/Bundle/GeneratorBundle",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-            "reference": "2e2d8096a65cfec2658bd3f21e506fa1058b962e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/2e2d8096a65cfec2658bd3f21e506fa1058b962e",
-            "reference": "2e2d8096a65cfec2658bd3f21e506fa1058b962e",
-            "shasum": ""
-        },
-        "require": {
-            "symfony/console": "~2.0",
-            "symfony/framework-bundle": "~2.2"
-        },
-        "require-dev": {
-            "doctrine/orm": "~2.2,>=2.2.3",
-            "symfony/doctrine-bridge": "~2.2",
-            "twig/twig": "~1.11"
-        },
-        "time": "2014-12-04 05:46:34",
-        "type": "symfony-bundle",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.4.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Sensio\\Bundle\\GeneratorBundle": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            }
-        ],
-        "description": "This bundle generates code for you"
-    },
-    {
         "name": "friendsofsymfony/user-bundle",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -1768,6 +1600,323 @@
         "homepage": "http://friendsofsymfony.github.com",
         "keywords": [
             "User management"
+        ]
+    },
+    {
+        "name": "sensio/generator-bundle",
+        "version": "v2.5.0",
+        "version_normalized": "2.5.0.0",
+        "target-dir": "Sensio/Bundle/GeneratorBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
+            "reference": "0225fcd08e94de2165ffa85de50c3c9d9592e96b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/0225fcd08e94de2165ffa85de50c3c9d9592e96b",
+            "reference": "0225fcd08e94de2165ffa85de50c3c9d9592e96b",
+            "shasum": ""
+        },
+        "require": {
+            "symfony/console": "~2.5",
+            "symfony/framework-bundle": "~2.2"
+        },
+        "require-dev": {
+            "doctrine/orm": "~2.2,>=2.2.3",
+            "symfony/doctrine-bridge": "~2.2",
+            "twig/twig": "~1.11"
+        },
+        "time": "2014-12-07 18:30:52",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.5.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Sensio\\Bundle\\GeneratorBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "This bundle generates code for you"
+    },
+    {
+        "name": "symfony/symfony",
+        "version": "2.6.x-dev",
+        "version_normalized": "2.6.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/symfony.git",
+            "reference": "0a09eaf609f193c3d0bc680449ea9ad0eeb52c24"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/symfony/zipball/0a09eaf609f193c3d0bc680449ea9ad0eeb52c24",
+            "reference": "0a09eaf609f193c3d0bc680449ea9ad0eeb52c24",
+            "shasum": ""
+        },
+        "require": {
+            "doctrine/common": "~2.2",
+            "php": ">=5.3.3",
+            "psr/log": "~1.0",
+            "twig/twig": "~1.12"
+        },
+        "replace": {
+            "symfony/browser-kit": "self.version",
+            "symfony/class-loader": "self.version",
+            "symfony/config": "self.version",
+            "symfony/console": "self.version",
+            "symfony/css-selector": "self.version",
+            "symfony/debug": "self.version",
+            "symfony/debug-bundle": "self.version",
+            "symfony/dependency-injection": "self.version",
+            "symfony/doctrine-bridge": "self.version",
+            "symfony/dom-crawler": "self.version",
+            "symfony/event-dispatcher": "self.version",
+            "symfony/expression-language": "self.version",
+            "symfony/filesystem": "self.version",
+            "symfony/finder": "self.version",
+            "symfony/form": "self.version",
+            "symfony/framework-bundle": "self.version",
+            "symfony/http-foundation": "self.version",
+            "symfony/http-kernel": "self.version",
+            "symfony/intl": "self.version",
+            "symfony/locale": "self.version",
+            "symfony/monolog-bridge": "self.version",
+            "symfony/options-resolver": "self.version",
+            "symfony/process": "self.version",
+            "symfony/propel1-bridge": "self.version",
+            "symfony/property-access": "self.version",
+            "symfony/proxy-manager-bridge": "self.version",
+            "symfony/routing": "self.version",
+            "symfony/security": "self.version",
+            "symfony/security-acl": "self.version",
+            "symfony/security-bundle": "self.version",
+            "symfony/security-core": "self.version",
+            "symfony/security-csrf": "self.version",
+            "symfony/security-http": "self.version",
+            "symfony/serializer": "self.version",
+            "symfony/stopwatch": "self.version",
+            "symfony/swiftmailer-bridge": "self.version",
+            "symfony/templating": "self.version",
+            "symfony/translation": "self.version",
+            "symfony/twig-bridge": "self.version",
+            "symfony/twig-bundle": "self.version",
+            "symfony/validator": "self.version",
+            "symfony/var-dumper": "self.version",
+            "symfony/web-profiler-bundle": "self.version",
+            "symfony/yaml": "self.version"
+        },
+        "require-dev": {
+            "doctrine/data-fixtures": "1.0.*",
+            "doctrine/dbal": "~2.2",
+            "doctrine/doctrine-bundle": "~1.2",
+            "doctrine/orm": "~2.2,>=2.2.3",
+            "egulias/email-validator": "~1.2",
+            "ircmaxell/password-compat": "~1.0",
+            "monolog/monolog": "~1.11",
+            "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
+            "propel/propel1": "~1.6"
+        },
+        "time": "2014-12-08 11:33:14",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.6-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Symfony\\": "src/"
+            },
+            "classmap": [
+                "src/Symfony/Component/HttpFoundation/Resources/stubs",
+                "src/Symfony/Component/Intl/Resources/stubs"
+            ],
+            "files": [
+                "src/Symfony/Component/Intl/Resources/stubs/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Symfony Community",
+                "homepage": "http://symfony.com/contributors"
+            },
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "The Symfony PHP framework",
+        "homepage": "http://symfony.com",
+        "keywords": [
+            "framework"
+        ]
+    },
+    {
+        "name": "willdurand/jsonp-callback-validator",
+        "version": "v1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/willdurand/JsonpCallbackValidator.git",
+            "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/willdurand/JsonpCallbackValidator/zipball/1a7d388bb521959e612ef50c5c7b1691b097e909",
+            "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~3.7"
+        },
+        "time": "2014-01-20 22:35:06",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "JsonpCallbackValidator": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "William Durand",
+                "email": "william.durand1@gmail.com",
+                "homepage": "http://www.willdurand.fr"
+            }
+        ],
+        "description": "JSONP callback validator."
+    },
+    {
+        "name": "adesigns/calendar-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "ADesigns/CalendarBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/adesigns/calendar-bundle.git",
+            "reference": "c523526b464d900567ab23c40d2f39b5e4ae9985"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/adesigns/calendar-bundle/zipball/c523526b464d900567ab23c40d2f39b5e4ae9985",
+            "reference": "c523526b464d900567ab23c40d2f39b5e4ae9985",
+            "shasum": ""
+        },
+        "require": {
+            "doctrine/collections": ">=1.0",
+            "friendsofsymfony/jsrouting-bundle": "~1.1",
+            "symfony/symfony": "~2.1"
+        },
+        "time": "2014-10-31 22:28:06",
+        "type": "symfony-bundle",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "ADesigns\\CalendarBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mike Yudin",
+                "email": "mikeyudin@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "This bundle allows you to integrate the jQuery FullCalendar plugin into your Symfony2 application.",
+        "homepage": "http://github.com/adesigns/calendar-bundle",
+        "keywords": [
+            "calendar",
+            "fullcalendar",
+            "jquery calendar"
+        ]
+    },
+    {
+        "name": "friendsofsymfony/jsrouting-bundle",
+        "version": "1.x-dev",
+        "version_normalized": "1.9999999.9999999.9999999-dev",
+        "target-dir": "FOS/JsRoutingBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
+            "reference": "dade3bb0b21007e5c0fb40f203ed197841eb913c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/dade3bb0b21007e5c0fb40f203ed197841eb913c",
+            "reference": "dade3bb0b21007e5c0fb40f203ed197841eb913c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2",
+            "symfony/console": "~2.0",
+            "symfony/framework-bundle": "~2.0",
+            "symfony/serializer": "~2.0",
+            "willdurand/jsonp-callback-validator": "~1.0"
+        },
+        "time": "2014-01-23 21:25:39",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.5-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "FOS\\JsRoutingBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "William Durand",
+                "email": "william.durand1@gmail.com",
+                "homepage": "http://www.willdurand.fr"
+            },
+            {
+                "name": "FriendsOfSymfony Community",
+                "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
+            }
+        ],
+        "description": "A pretty nice way to expose your Symfony2 routing to client applications.",
+        "homepage": "http://friendsofsymfony.github.com",
+        "keywords": [
+            "Js Routing",
+            "javascript",
+            "routing"
         ]
     }
 ]

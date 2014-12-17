@@ -14,6 +14,15 @@
                 <center><img src="{{ asset('img/logo.png') }}" width="200" /></center>
             </div>
             <br /><br />
+
+            {% if not is_granted("IS_AUTHENTICATED_FULLY") %}
+            <div class="item">
+                <a href="{{ path('login') }}">Connexion</a>
+            </div>
+            {% endif %}
+
+            {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+
             <div class="item">
                 <a href="{{ path('home') }}">Accueil du site</a>
             </div>
@@ -23,16 +32,16 @@
             <div class="item">
                 <a href="{{ path('info') }}">A propos de</a>
             </div>
-            
+
             <br /><br />
-            
             <div class="item">
-                <a href="{{ path('login') }}">Connexion</a>
+                <a href="{{ path('logout') }}">Deconnexion</a>
             </div>
             {% if is_granted("ROLE_ADMIN") %}
             <div class="item">
-                    <a href="{{ path('admin') }}">Administration</a>              
+                <a href="{{ path('admin') }}">Administration</a>              
             </div>
+            {% endif %}
             {% endif %}
         </div>
         <div id="container">

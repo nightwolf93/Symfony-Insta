@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\SecurityContext;
 class SecurityController extends Controller {
-
+    
     /**
      * @Route("/login", name="login")
      * @Template()

@@ -16,5 +16,10 @@
             <file>file:/Applications/MAMP/htdocs/Symfony-Insta/src/Insta/AppBundle/Controller/PlanningController.php</file>
             <file>file:/Applications/MAMP/htdocs/Symfony-Insta/web/less/app.less</file>
         </group>
+        <group name="symfony">
+            <file>file:/Applications/MAMP/htdocs/symfony_group/app/Resources/views/base.html.twig</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_group/app/Resources/views/newEmptyPHP.php</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_group/vendor/adesigns/calendar-bundle/ADesigns/CalendarBundle/Resources/config/services.xml</file>
+        </group>
     </open-files>
 </project-private>
